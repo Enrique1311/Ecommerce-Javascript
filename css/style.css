@@ -3,17 +3,19 @@
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	overflow-x: hidden;
 }
 
 :root {
 	--primary-font: "Inter", sans-serif;
 	--secondary-font: "Libre-Baskerville", serif;
-	--primary-color: #d005f9;
-	--primary-transparent-color: #360241ba;
-	--secondary-color: #eb7209;
-	--green-color: rgb(4, 192, 4);
+	--primary-color: #8f02ac;
+	--primary-dark-color: #5b036d;
+	--primary-transparent-color: #8f02acba;
+	--secondary-color: #03d4a3;
+	--green-color: #04c004;
 	--red-color: red;
+	--grey-color: #d3d1d1;
+	--light-grey-color: #e7e6e6;
 	--white-color: #ffffff;
 	--black-color: #000000;
 	--shadow: 0 10px 20px 0 #00000033;
@@ -22,8 +24,10 @@
 
 body {
 	font-family: var(--primary-font);
+	color: var(--primary-color);
 	font-weight: 400;
 	line-height: 1.8;
+	overflow-x: hidden;
 }
 
 ul {
@@ -32,6 +36,7 @@ ul {
 
 a {
 	text-decoration: none;
+	color: var(--primary-color);
 }
 
 img {
@@ -86,7 +91,7 @@ strong {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1280px;
 	padding: 0.5rem 2rem;
 	margin: 0 auto;
 }
@@ -98,6 +103,13 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
+}
+
+.menu-brand-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 6rem;
 }
 
 .header-left .navbar {
@@ -113,7 +125,7 @@ header {
 	transition: all 0.5s linear;
 }
 
-.header-left .navbar ul {
+.header-left .menu {
 	position: absolute;
 	height: 100%;
 	width: 50%;
@@ -123,8 +135,10 @@ header {
 	background-color: var(--white-color);
 	transform: translateX(100%);
 	transition: all 0.5s linear;
-	gap: 2rem;
-	padding: 1rem 2rem;
+}
+
+.header-left li {
+	position: relative;
 }
 
 .header-left .navbar.active {
@@ -139,33 +153,60 @@ header {
 	display: block;
 }
 
-.menu-icon a i,
-.close-menu-icon a i {
-	font-size: 30px;
+.menu-icon i {
+	font-size: 28px;
+	cursor: pointer;
 }
 
-.brand a {
-	font-family: var(--secondary-font);
-	font-size: 30px;
+.close-menu-icon {
+	font-size: 32px;
+	cursor: pointer;
+	margin: 1rem 2rem;
 }
 
 .header-right ul {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 1rem;
 }
 
 .header-left a,
 .header-right a {
 	position: relative;
-	font-size: 20px;
+	font-size: 18px;
+	font-weight: bold;
 	line-height: 1;
-	transition: 0.3s color;
+	transition: 0.3s color linear;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.2rem;
+	padding: 1rem 2rem;
+	transition: all 0.5s linear;
 }
 
-.header-left a:hover,
+.header-right a {
+	padding: 1rem;
+}
+
+.header-left a:hover {
+	background-color: var(--light-grey-color);
+	box-shadow: var(--shadow);
+	transform: scale(1.05);
+}
+
 .header-right a:hover {
+	color: var(--primary-dark-color);
+}
+
+.brand a {
+	font-family: var(--secondary-font);
+	font-size: 1.8rem;
+	display: inline-block;
+	line-height: 1.2rem;
+}
+
+.brand a span {
 	color: var(--secondary-color);
 }
 
@@ -173,9 +214,9 @@ header {
 	position: absolute;
 	font-size: 10px;
 	font-weight: 600;
-	top: -6px;
-	right: -10px;
-	background-color: var(--primary-color);
+	top: 3px;
+	right: 3px;
+	background-color: var(--secondary-color);
 	color: var(--white-color);
 	width: 20px;
 	height: 20px;
@@ -185,12 +226,72 @@ header {
 	border-radius: 50%;
 }
 
+.header-left .submenu {
+	box-shadow: var(--shadow);
+}
+
+.menu li {
+	position: relative;
+}
+
+.submenu {
+	position: relative;
+	display: none;
+	width: 100%;
+	transform: scale(1.05);
+}
+
+.menu li:hover .submenu {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--light-grey-color);
+	transform: scale(1.05);
+	z-index: 20;
+}
+
+.submenu a {
+	font-size: 0.8rem;
+}
+
+.submenu li a:hover {
+	background-color: var(--grey-color);
+	box-shadow: var(--shadow);
+}
+
+.header-left .menu li {
+	border-bottom: 1px solid var(--light-grey-color);
+}
+
 @media screen and (min-width: 990px) {
 	.header-left .navbar {
 		display: flex;
+		position: relative;
+		height: 100%;
+		background-color: var(--white-color);
+		transform: translateX(0);
+	}
+
+	.header-left .close-menu-icon {
+		display: none;
+	}
+
+	.header-left .navbar ul {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		transform: translateX(0);
 	}
 
 	.menu-icon {
 		display: none;
+	}
+
+	.header-left .menu li {
+		border-bottom: none;
+	}
+
+	.submenu {
+		position: absolute;
 	}
 }

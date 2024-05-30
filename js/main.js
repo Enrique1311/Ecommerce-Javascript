@@ -7,10 +7,10 @@ function showMobileMenu() {
 
 	d.addEventListener("click", (e) => {
 		console.log(e);
-		if (e.target.matches(".menu-icon a i")) {
+		if (e.target.matches(".menu-icon i")) {
 			$navbar.classList.add("active");
 		}
-		if (e.target.matches(".close-menu-icon a i")) {
+		if (e.target.matches(".close-menu-icon")) {
 			$navbar.classList.remove("active");
 		}
 	});
