@@ -6,7 +6,6 @@ function showMobileMenu() {
 	const $menuLeft = d.querySelector(".menu-left");
 
 	d.addEventListener("click", (e) => {
-		console.log(e);
 		if (e.target.matches(".hamb-menu-icon i")) {
 			$menuLeft.classList.add("active");
 		}
@@ -16,3 +15,22 @@ function showMobileMenu() {
 	});
 }
 showMobileMenu();
+
+// Header searcher **********************************************
+
+function openCloseSearcher() {
+	const $headerSeacher = d.querySelector(".header-searcher");
+
+	d.addEventListener("click", (e) => {
+		console.log(e);
+		if (e.target.matches(".menu-right-search-icon i")) {
+			e.preventDefault();
+			$headerSeacher.classList.toggle("inactive");
+		}
+
+		if (e.target.matches(".input-close-icon")) {
+			$headerSeacher.classList.toggle("inactive");
+		}
+	});
+}
+openCloseSearcher();

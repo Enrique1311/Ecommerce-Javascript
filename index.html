@@ -34,36 +34,93 @@
 				<div class="mobile-brand brand">
 					<a href="#"><span>My</span>Shop</a>
 				</div>
-
 				<ul class="menu-left">
 					<div class="close-menu-icon"><i class="fa-solid fa-xmark"></i></div>
-
 					<li><a href="#">Home</a></li>
-
-					<li>
+					<li class="with-submenu">
 						<a href="#">Products<i class="fa-solid fa-angle-down"></i></a>
 						<div class="products-submenu">
-							<div class="products-submenu-left">
+							<div class="products-submenu-cards">
 								<article class="product-card">
-									<img
-										src="./assets/product_01.jpg"
-										alt="woman"
-									/>
+									<div class="card-img-container">
+										<img
+											class="first-card-img"
+											src="./assets/product_01.jpg"
+											alt="woman"
+										/>
+										<img
+											class="second-card-img"
+											src="./assets/product_01b.jpg"
+											alt="woman2"
+										/>
+										<div class="card-discount">-25%</div>
+										<div class="card-img-icons-container">
+											<a href="#"><i class="fa-regular fa-star"></i></a
+											><a href=""
+												><i class="fa-solid fa-arrow-right-arrow-left"></i
+											></a>
+											<a href=""><i class="fa-regular fa-eye"></i></a>
+										</div>
+									</div>
+									<div class="details-container">
+										<h3>The Sweater in Tosca</h3>
+										<p><span>$62 </span>$45</p>
+									</div>
 								</article>
 								<article class="product-card">
-									<img
-										src="./assets/product_01.jpg"
-										alt="woman"
-									/>
+									<div class="card-img-container">
+										<img
+											class="second-card-img"
+											src="./assets/product_02b.jpg"
+											alt="woman2"
+										/>
+										<img
+											class="first-card-img"
+											src="./assets/product_02.jpg"
+											alt="woman"
+										/>
+										<div class="card-discount">-25%</div>
+										<div class="card-img-icons-container">
+											<a href="#"><i class="fa-regular fa-star"></i></a
+											><a href=""
+												><i class="fa-solid fa-arrow-right-arrow-left"></i
+											></a>
+											<a href=""><i class="fa-regular fa-eye"></i></a>
+										</div>
+									</div>
+									<div class="details-container">
+										<h3>The Sweater in Tosca</h3>
+										<p><span>$62 </span>$45</p>
+									</div>
 								</article>
 								<article class="product-card">
-									<img
-										src="./assets/product_01.jpg"
-										alt="woman"
-									/>
+									<div class="card-img-container">
+										<img
+											class="first-card-img"
+											src="./assets/product_03.jpg"
+											alt="woman"
+										/>
+										<img
+											class="second-card-img"
+											src="./assets/product_03b.jpg"
+											alt="woman2"
+										/>
+										<div class="card-discount">-25%</div>
+										<div class="card-img-icons-container">
+											<a href="#"><i class="fa-regular fa-star"></i></a
+											><a href=""
+												><i class="fa-solid fa-arrow-right-arrow-left"></i
+											></a>
+											<a href=""><i class="fa-regular fa-eye"></i></a>
+										</div>
+									</div>
+									<div class="details-container">
+										<h3>The Sweater in Tosca</h3>
+										<p><span>$62 </span>$45</p>
+									</div>
 								</article>
 							</div>
-							<ul class="products-submenu-right">
+							<ul class="products-submenu-links">
 								<li>
 									<a href="#"><h3>Apparel</h3></a>
 									<ul>
@@ -98,14 +155,11 @@
 							</ul>
 						</div>
 					</li>
-
 					<li><a href="#">Discounts</a></li>
-
 					<li class="desktop-brand brand">
 						<a href="#"><span>My</span>Shop</a>
 					</li>
-
-					<li>
+					<li class="with-submenu">
 						<a href="#">Specials<i class="fa-solid fa-angle-down"></i></a>
 						<ul class="specials-submenu">
 							<li><a href="#">Dolce & Gabbana</a></li>
@@ -114,11 +168,22 @@
 							<li><a href="#">Dior</a></li>
 						</ul>
 					</li>
-
 					<li><a href="#">Sale</a></li>
+					<li class="navbar-left-buttons">
+						<button
+							type="button"
+							class="main-button"
+						>
+							LOGIN</button
+						><button
+							type="button"
+							class="main-button"
+						>
+							REGISTER
+						</button>
+					</li>
 				</ul>
 			</nav>
-
 			<nav class="navbar-right">
 				<ul class="menu-right">
 					<li>
@@ -130,7 +195,7 @@
 							><i class="fa-solid fa-star"></i
 						></a>
 					</li>
-					<li>
+					<li class="menu-right-search-icon">
 						<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
 					</li>
 					<li>
@@ -141,6 +206,17 @@
 					</li>
 				</ul>
 			</nav>
+			<form
+				action=""
+				class="header-searcher inactive"
+			>
+				<i class="fa-solid fa-magnifying-glass input-search-icon"></i>
+				<input
+					type="text"
+					placeholder="Search products..."
+				/>
+				<i class="fa-solid fa-xmark input-close-icon"></i>
+			</form>
 		</header>
 		<main></main>
 		<footer></footer>
