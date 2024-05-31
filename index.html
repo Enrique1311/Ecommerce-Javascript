@@ -27,59 +27,106 @@
 	</head>
 	<body>
 		<header class="container">
-			<div class="menu-brand-header">
-				<div class="header-left">
-					<div class="menu-icon">
-						<i class="fa-solid fa-bars"></i>
-					</div>
-					<nav class="navbar">
-						<ul class="menu">
-							<li>
-								<i class="fa-solid fa-xmark close-menu-icon"></i>
-							</li>
-							<li><a href="#">Home</a></li>
-							<li>
-								<a href="#">Products<i class="fa-solid fa-angle-down"></i></a>
-								<!-- <ul class="submenu">
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-									<li><a href="#"></a></li>
-								</ul> -->
-							</li>
-							<li><a href="#">Discounts</a></li>
-							<li>
-								<a href="#">Specials<i class="fa-solid fa-angle-down"></i></a>
-								<ul class="submenu">
-									<li><a href="#">Dolce & Gabbana</a></li>
-									<li><a href="#">Louis Vuitton</a></li>
-									<li><a href="#">Versace</a></li>
-									<li><a href="#">Dior</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Sale</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="header-center">
-					<div class="brand">
-						<a href="#"
-							><span>My</span><br />
-							Shop</a
-						>
-					</div>
-				</div>
+			<div class="hamb-menu-icon">
+				<i class="fa-solid fa-bars"></i>
 			</div>
+			<nav class="navbar-left">
+				<div class="mobile-brand brand">
+					<a href="#"><span>My</span>Shop</a>
+				</div>
 
-			<div class="header-right">
-				<ul class="menu">
+				<ul class="menu-left">
+					<div class="close-menu-icon"><i class="fa-solid fa-xmark"></i></div>
+
+					<li><a href="#">Home</a></li>
+
+					<li>
+						<a href="#">Products<i class="fa-solid fa-angle-down"></i></a>
+						<div class="products-submenu">
+							<div class="products-submenu-left">
+								<article class="product-card">
+									<img
+										src="./assets/product_01.jpg"
+										alt="woman"
+									/>
+								</article>
+								<article class="product-card">
+									<img
+										src="./assets/product_01.jpg"
+										alt="woman"
+									/>
+								</article>
+								<article class="product-card">
+									<img
+										src="./assets/product_01.jpg"
+										alt="woman"
+									/>
+								</article>
+							</div>
+							<ul class="products-submenu-right">
+								<li>
+									<a href="#"><h3>Apparel</h3></a>
+									<ul>
+										<li><a href="">Prada</a></li>
+										<li><a href="">Gucci</a></li>
+										<li><a href="">Channel</a></li>
+										<li><a href="">Ganni</a></li>
+										<li><a href="">Zara</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><h3>Shoes</h3></a>
+									<ul>
+										<li><a href="">Adidas</a></li>
+										<li><a href="">Nike</a></li>
+										<li><a href="">Puma</a></li>
+										<li><a href="">Gucci</a></li>
+										<li><a href="">Dolce & Gabbana</a></li>
+										<li><a href="">Louis Vuitton</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><h3>Perfumes</h3></a>
+									<ul>
+										<li><a href="">Armani</a></li>
+										<li><a href="">Channel</a></li>
+										<li><a href="">Dior</a></li>
+										<li><a href="">Gucci</a></li>
+										<li><a href="">Hugo Boss</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li><a href="#">Discounts</a></li>
+
+					<li class="desktop-brand brand">
+						<a href="#"><span>My</span>Shop</a>
+					</li>
+
+					<li>
+						<a href="#">Specials<i class="fa-solid fa-angle-down"></i></a>
+						<ul class="specials-submenu">
+							<li><a href="#">Dolce & Gabbana</a></li>
+							<li><a href="#">Louis Vuitton</a></li>
+							<li><a href="#">Versace</a></li>
+							<li><a href="#">Dior</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">Sale</a></li>
+				</ul>
+			</nav>
+
+			<nav class="navbar-right">
+				<ul class="menu-right">
 					<li>
 						<a href="#"><i class="fa-solid fa-user"></i></a>
 					</li>
 					<li>
 						<a href="#"
-							><span class="item-floating">10</span
+							><span class="ballon-floating">10</span
 							><i class="fa-solid fa-star"></i
 						></a>
 					</li>
@@ -88,12 +135,12 @@
 					</li>
 					<li>
 						<a href=""
-							><span class="item-floating">0</span
+							><span class="ballon-floating">0</span
 							><i class="fa-solid fa-bag-shopping"></i
 						></a>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		</header>
 		<main></main>
 		<footer></footer>
