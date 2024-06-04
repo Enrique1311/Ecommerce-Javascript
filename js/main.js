@@ -28,7 +28,7 @@ function openCloseSearcher() {
 			$headerSeacher.classList.toggle("inactive");
 		}
 
-		if (e.target.matches(".input-close-icon")) {
+		if (e.target.matches(".input-close-icon i")) {
 			$headerSeacher.classList.toggle("inactive");
 		}
 	});
@@ -71,17 +71,23 @@ function moveSlider() {
 	};
 
 	d.addEventListener("click", (e) => {
-		if (e.target.matches(".home-slider-control-right i")) {
+		if (
+			e.target.matches(".home-slider-control-right") ||
+			e.target.matches(".home-slider-control-right i")
+		) {
 			nextSliderItem();
 		}
 
-		if (e.target.matches(".home-slider-control-left i")) {
+		if (
+			e.target.matches(".home-slider-control-left") ||
+			e.target.matches(".home-slider-control-left i")
+		) {
 			prevSliderItem();
 		}
 	});
 
-	// setInterval(() => {
-	// 	nextSliderItem();
-	// }, 3000);
+	setInterval(() => {
+		nextSliderItem();
+	}, 3000);
 }
 moveSlider();
