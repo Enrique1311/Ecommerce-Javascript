@@ -34,3 +34,54 @@ function openCloseSearcher() {
 	});
 }
 openCloseSearcher();
+
+// Home Slider *******************************************************
+
+function moveSlider() {
+	const $homeSlider = d.querySelector(".home-slider");
+	let $allSliderItems = d.querySelectorAll(".home-slider-item"),
+		$lastSliderItem = $allSliderItems[$allSliderItems.length - 1];
+
+	$homeSlider.insertAdjacentElement("afterbegin", $lastSliderItem);
+
+	const nextSliderItem = () => {
+		let $firstSliderItem = d.querySelectorAll(".home-slider-item")[0];
+		$homeSlider.style.marginLeft = "-200%";
+		$homeSlider.style.transition = "all .5s linear";
+
+		setTimeout(() => {
+			$homeSlider.style.transition = "none";
+			$homeSlider.insertAdjacentElement("beforeend", $firstSliderItem);
+			$homeSlider.style.marginLeft = "-100%";
+		}, 500);
+	};
+
+	const prevSliderItem = () => {
+		$allSliderItems = d.querySelectorAll(".home-slider-item");
+		$lastSliderItem = $allSliderItems[$allSliderItems.length - 1];
+
+		$homeSlider.style.marginLeft = "0";
+		$homeSlider.style.transition = "all 0.5s linear";
+
+		setTimeout(() => {
+			$homeSlider.style.transition = "none";
+			$homeSlider.insertAdjacentElement("afterbegin", $lastSliderItem);
+			$homeSlider.style.marginLeft = "-100%";
+		}, 500);
+	};
+
+	d.addEventListener("click", (e) => {
+		if (e.target.matches(".home-slider-control-right i")) {
+			nextSliderItem();
+		}
+
+		if (e.target.matches(".home-slider-control-left i")) {
+			prevSliderItem();
+		}
+	});
+
+	// setInterval(() => {
+	// 	nextSliderItem();
+	// }, 3000);
+}
+moveSlider();
