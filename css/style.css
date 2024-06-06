@@ -102,7 +102,6 @@ strong {
 }
 
 main {
-	margin-top: 3rem;
 	z-index: 10;
 }
 
@@ -144,6 +143,7 @@ header {
 	top: 0;
 	z-index: 2000;
 	background-color: var(--white-color);
+	box-shadow: var(--shadow);
 }
 
 .header-container {
@@ -265,6 +265,7 @@ header {
 .product-card {
 	width: 240px;
 	padding: 0.5rem;
+	position: relative;
 }
 
 .product-card .first-card-img {
@@ -487,6 +488,7 @@ header {
 	position: relative;
 	height: 90vh;
 	overflow: hidden;
+	margin-top: 3rem;
 }
 
 .home-slider {
@@ -627,12 +629,14 @@ header {
 
 /* New Arrivals ************************************************ */
 
-.arrivals-slider {
-	width: 100%;
+.arrivals-container {
+	width: fit-content;
 	display: flex;
-	justify-content: center;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 1rem;
+	overflow-x: auto;
+	scrollbar-width: none;
 }
 
 /* Media Queries ************************************************ */
@@ -677,7 +681,7 @@ header {
 	}
 
 	main {
-		margin-top: 4.5rem;
+		margin-top: 4rem;
 	}
 
 	.container {
